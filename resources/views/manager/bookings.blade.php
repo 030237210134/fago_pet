@@ -75,21 +75,20 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
+          @if(session()->has('message'))
+                
+                <div class="alert alert-warning">
 
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true" >x</button>
+
+                    {{session()->get('message')}}
+                    
+
+                </div>
+
+                @endif
           <h1 class="title_deg"> Quản lý Đơn Dịch Vụ </h1>
           
-          <div style="padding-left:400px;padding-top:30px;">
-        <form action="{{ url('search_product') }}" method="GET">
-
-        @csrf
-        
-        <input style="color:black; width:500px;" type="text" name="search_product" placeholder="Tìm kiếm sản phẩm">
-
-
-        <input type="submit" name="search_product" class="btn btn-outline-primary" value="Tìm kiếm">
-        
-          </form>
-        </div>
 
         <div class="div_deg">
 

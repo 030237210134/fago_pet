@@ -105,7 +105,7 @@
 
         @csrf
         
-        <input style="color:black; width:500px;" type="text" name="search_customer" placeholder="Tìm kiếm sản phẩm">
+        <input style="color:black; width:500px;" type="text" name="search_customer" placeholder="Tìm kiếm khách hàng">
 
 
         <input type="submit" name="search" class="btn btn-outline-primary" value="Tìm kiếm">

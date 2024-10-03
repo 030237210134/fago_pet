@@ -67,7 +67,21 @@
         <div class="main-panel">
           <div class="content-wrapper">
 
+          @if(session()->has('message'))
+                
+                <div class="alert alert-warning">
+
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true" >x</button>
+
+                    {{session()->get('message')}}
+                    
+
+                </div>
+
+                @endif
           <h1 class="title_deg"> Quản lý Đơn Hàng </h1>
+
+
 
           <div style="padding-left:400px;padding-bottom:30px;">
         <form action="{{url('search_order')}}" method="get">

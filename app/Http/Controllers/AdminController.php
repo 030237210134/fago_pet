@@ -666,7 +666,7 @@ class AdminController extends Controller
 
         $booking->save();
     
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Lịch hẹn đã được xác nhận thành công!');;
         }
         else
         {
