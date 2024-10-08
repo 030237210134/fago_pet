@@ -242,6 +242,9 @@ class HomeController extends Controller
         $data=cart::where('user_id','=',$userid)->get();
 
         $orderId = Order::max('order_id') + 1;
+        while (Order::where('order_id', $orderId)->exists()) {
+            $orderId++;
+        }
 
         $totalPrice = 0;
         $shippingFee = 25000;
